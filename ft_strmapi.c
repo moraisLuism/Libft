@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: lmorais- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/31 11:07:06 by lmorais-          #+#    #+#             */
-/*   Updated: 2023/08/31 11:07:07 by lmorais-         ###   ########.fr       */
+/*   Created: 2023/09/25 12:04:00 by lmorais-          #+#    #+#             */
+/*   Updated: 2023/10/05 11:18:51 by lmorais-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	unsigned int	i;
 	char			*str;
 
+	if (!s)
+		return (NULL);
 	str = (char *)malloc(ft_strlen(s) + 1);
 	if (!str)
 		return (NULL);

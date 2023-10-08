@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: lmorais- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/30 17:19:40 by lmorais-          #+#    #+#             */
-/*   Updated: 2023/08/30 17:19:42 by lmorais-         ###   ########.fr       */
+/*   Created: 2023/09/11 14:09:23 by lmorais-          #+#    #+#             */
+/*   Updated: 2023/09/21 10:19:56 by lmorais-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,22 +14,14 @@
 
 char	*ft_strchr(const char *s, int c)
 {
-	char			ch;
-	unsigned int	i;
+	char	search;
 
-	ch = (char)c;
-	i = 0;
-	while (s[i])
+	search = c;
+	while (*s != search)
 	{
-		if (s[i] == ch)
-		{
-			return ((char *)(s + i));
-		}
-		i++;
+		if (*s == '\0')
+			return (NULL);
+		s++;
 	}
-	if (s[i] == ch)
-	{
-		return ((char *)(s + i));
-	}
-	return (0);
+	return ((char *)s);
 }
